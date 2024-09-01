@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .side_menu {
+            width: 250px;
+            height: 100vh;
+            /* background-color: rgb(168, 35, 35); */
+            position: fixed;
+            right: 0px;
+            border: 1px solid rgb(165, 160, 160);
+            background-color: rgb(250, 239, 239);
+
+        }
+
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background-color: rgb(15, 13, 13);
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .links {
+            position: absolute;
+            top: 240px;
+            direction: rtl;
+            list-style: none;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .active {
+            background-color: goldenrod;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            width: 200%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0;
+            transform: translate(50%);
+            margin-top: 5px;
+            /* border: 1px solid black; */
+            /* border-radius: 10% 10% 0 20px; */
+        }
+
+        li a i {
+            margin-right: 0px;
+            margin-left: 20px;
+        }
+
+        li:hover {
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+
+        li:hover>a {
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <aside class="side_menu">
+        <div class="image">
+            <img src="./1.jpg" alt="">
+            <h1>kayahan</h1>
+        </div>
+        <ul class="links">
+            <li class="active">
+                <a href="">
+                    <i class="fa fa-home"></i>
+                    <span>صفحه اصلی</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="fa fa-home"></i>
+                    <span>صفحه اصلی</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-home"></i>
+                    <span>صفحه اصلی</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-home"></i>
+                    <span>صفحه اصلی</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-car"></i>
+                    <span>صفحه اصلی</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <script>
+        const arraya = document.getElementsByTagName("a");
+        for (let i = 0; i < arraya.length; ++i) {
+            arraya[i].addEventListener("click", function () {
+                arraya[i].classList.add(".active");
+            });
+        }
+    </script>
+</body>
+</html>
